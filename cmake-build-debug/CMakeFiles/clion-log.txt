@@ -1,0 +1,4 @@
+/snap/clion/73/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug

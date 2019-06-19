@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="unidad_6_programacion_concurrente_AlejandroGH97"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unidad_6_programacion_concurrente_AlejandroGH97">
+				<Option output="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/unidad_6_programacion_concurrente_AlejandroGH97" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 unidad_6_programacion_concurrente_AlejandroGH97"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unidad_6_programacion_concurrente_AlejandroGH97/fast">
+				<Option output="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/unidad_6_programacion_concurrente_AlejandroGH97" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 unidad_6_programacion_concurrente_AlejandroGH97/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alejandro/Documents/UTEC/Ciclo\ 3/POO\ II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/main.cpp">
+			<Option target="unidad_6_programacion_concurrente_AlejandroGH97"/>
+		</Unit>
+		<Unit filename="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/matriz_reg.cpp">
+			<Option target="unidad_6_programacion_concurrente_AlejandroGH97"/>
+		</Unit>
+		<Unit filename="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/matriz_reg.h">
+			<Option target="unidad_6_programacion_concurrente_AlejandroGH97"/>
+		</Unit>
+		<Unit filename="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/matriz_thread.cpp">
+			<Option target="unidad_6_programacion_concurrente_AlejandroGH97"/>
+		</Unit>
+		<Unit filename="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/matriz_thread.h">
+			<Option target="unidad_6_programacion_concurrente_AlejandroGH97"/>
+		</Unit>
+		<Unit filename="/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

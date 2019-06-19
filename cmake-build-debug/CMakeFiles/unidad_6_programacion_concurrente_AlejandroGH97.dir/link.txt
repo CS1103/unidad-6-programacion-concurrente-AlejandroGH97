@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/unidad_6_programacion_concurrente_AlejandroGH97.dir/main.cpp.o CMakeFiles/unidad_6_programacion_concurrente_AlejandroGH97.dir/matriz_reg.cpp.o CMakeFiles/unidad_6_programacion_concurrente_AlejandroGH97.dir/matriz_thread.cpp.o  -o unidad_6_programacion_concurrente_AlejandroGH97 

@@ -1,0 +1,3 @@
+/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/CMakeFiles/unidad_6_programacion_concurrente_AlejandroGH97.dir
+/home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/cmake-build-debug/CMakeFiles/edit_cache.dir
