@@ -11,7 +11,7 @@
 #include <bits/stl_vector.h>
 #include <vector>
 
-static const int thread_num = 2;
+static const int thread_num = 4;
 
 
 class matriz_thread {
@@ -65,7 +65,6 @@ public:
         for (int i = thread*m1.n/thread_num; i < (thread+1)*m1.n/thread_num; i++) {
             for (int j = 0; j < m2.m; j++) {
                 for (int k = 0; k < m2.n; k++){
-                    std::cout<<i<<j<<std::endl;
                     matriz[i][j] += (m1.matriz[i][k] * m2.matriz[k][j]);
                 }
             }
@@ -81,7 +80,7 @@ public:
         std::vector<std::thread> threads(thread_num);
 
         int** temp = new int*[m1.n];
-        for(int i = 0; i<m2.m;i++){
+        for(int i = 0; i<n;i++){
             temp[i]=new int[m2.m]{0};
         }
 
