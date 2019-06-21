@@ -13,9 +13,15 @@ matriz_reg.h
 /home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/matriz_reg.h
 matriz_thread.h
 /home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/matriz_thread.h
+ctime
+-
+random
+-
 
 /home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/matriz_reg.h
 iostream
+-
+iomanip
 -
 
 /home/alejandro/Documents/UTEC/Ciclo 3/POO II/unidad-6-programacion-concurrente-AlejandroGH97/matriz_thread.cpp
@@ -30,5 +36,9 @@ thread
 bits/stl_vector.h
 -
 vector
+-
+iomanip
+-
+mutex
 -
 

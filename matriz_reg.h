@@ -7,6 +7,8 @@
 
 
 #include <iostream>
+#include <iomanip>
+
 
 class matriz_reg {
     int n;//filas
@@ -31,6 +33,12 @@ public:
         }
     }
 
+    void llenarMatriz_auto(int _n, int _m, int num){
+        if(_n<n && _n >= 0 && _m<m && _m >= 0) {
+            matriz[_n][_m]=num;
+        }
+    }
+
     void llenarMatriz(int _n, int _m){
         if(_n<n && _n >= 0 && _m<m && _m >= 0) {
             std::cin >> matriz[_n][_m];
@@ -48,7 +56,7 @@ public:
     void imprimir(){
         for(int row = 0;row<n;row++){
             for(int column = 0;column<m;column++){
-                std::cout<<matriz[row][column];
+                std::cout<<std::setw(5)<<matriz[row][column];
             }
             std::cout<<"\n";
         }

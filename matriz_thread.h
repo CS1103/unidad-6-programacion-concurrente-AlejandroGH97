@@ -10,11 +10,15 @@
 #include <thread>
 #include <bits/stl_vector.h>
 #include <vector>
+#include <iomanip>
+#include <mutex>
+
 
 static const int thread_num = 4;
 
 
 class matriz_thread {
+    std::mutex mtx;
     int n;//filas
     int m;//columnas
 
@@ -36,13 +40,19 @@ public:
         }
     }
 
-    void llenarMatriz(int _n, int _m){
+    void llenarMatriz_auto(int _n, int _m, int num){
+        if(_n<n && _n >= 0 && _m<m && _m >= 0) {
+            matriz[_n][_m]=num;
+        }
+    }
+
+    void llenarMatriz_por_coordenada(int _n, int _m){
         if(_n<n && _n >= 0 && _m<m && _m >= 0) {
             std::cin >> matriz[_n][_m];
         }
     }
 
-    void llenarMatriz(int num){
+    void llenarMatriz_un_digito(int num){
         for(int row = 0;row<n;row++){
             for(int column = 0;column<m;column++){
                 matriz[row][column]=num;
@@ -53,7 +63,7 @@ public:
     void imprimir(){
         for(int row = 0;row<n;row++){
             for(int column = 0;column<m;column++){
-                std::cout<<matriz[row][column];
+                std::cout<<std::setw(5)<<matriz[row][column];
             }
             std::cout<<"\n";
         }
@@ -65,7 +75,9 @@ public:
         for (int i = thread*m1.n/thread_num; i < (thread+1)*m1.n/thread_num; i++) {
             for (int j = 0; j < m2.m; j++) {
                 for (int k = 0; k < m2.n; k++){
+                    mtx.lock();
                     matriz[i][j] += (m1.matriz[i][k] * m2.matriz[k][j]);
+                    mtx.unlock();
                 }
             }
         }
