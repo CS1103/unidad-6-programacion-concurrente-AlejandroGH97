@@ -6,6 +6,8 @@
 #include "matriz_reg.h"
 #include "matriz_thread.h"
 
+
+
 int main(){
     matriz_reg m1(3,2);
 
@@ -52,14 +54,18 @@ int main(){
         }
     }
 
-    matriz_thread* m6 = m4*m5;
+    matriz_thread m6;
 
     std::cout<<"THREAD\n\n";
     m4.imprimir();
     std::cout<<"\n";
     m5.imprimir();
+
+    m6.multiplicar_thread(m4,m5);
+
+
     std::cout<<"\n";
-    m6->imprimir();
+    m6.imprimir();
     std::cout<<"\n";
 
 }

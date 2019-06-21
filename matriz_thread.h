@@ -11,13 +11,12 @@
 #include <bits/stl_vector.h>
 #include <vector>
 
-class matriz_thread;
-void multiplicar(matriz_thread& m1, matriz_thread& m2, matriz_thread& respuesta, int thread_num, int max_threads);
+static const int thread_num = 2;
+
 
 class matriz_thread {
     int n;//filas
     int m;//columnas
-    friend void multiplicar(matriz_thread& m1, matriz_thread& m2, matriz_thread& respuesta, int thread_num, int max_threads);
 
 public:
     int** matriz;
@@ -61,54 +60,48 @@ public:
     }
 
 
-    matriz_thread* operator*(const matriz_thread rhs) {
+    void multiplicar(matriz_thread& m1, matriz_thread& m2, int thread){
 
-        if (m==rhs.n) {
-
-            auto respuesta = new matriz_thread(n, rhs.m);
-
-            int max_hilos = 3;
-
-            std::thread hilos[max_hilos];
-
-            for (int i = 0; i < max_hilos; i++) {
-
-                hilos[i]= std::thread(multiplicar,
-                                            std::ref(*this),
-                                      std::ref(rhs),
-                                            std::ref(respuesta),
-                                            i,
-                                            max_hilos);
-
-
-                for (int i = 0;i<max_hilos;i++) {
-                    hilos[i].join();
+        for (int i = thread*m1.n/thread_num; i < (thread+1)*m1.n/thread_num; i++) {
+            for (int j = 0; j < m2.m; j++) {
+                for (int k = 0; k < m2.n; k++){
+                    std::cout<<i<<j<<std::endl;
+                    matriz[i][j] += (m1.matriz[i][k] * m2.matriz[k][j]);
                 }
-
-
             }
         }
 
-        else{
-            std::cout<<"Matrices invalidas\n";
-            auto respuesta = new matriz_thread(1, 1);
-            respuesta->llenarMatriz(0);
-            return respuesta;
-        }
     }
+
+
+    void multiplicar_thread(matriz_thread& m1, matriz_thread& m2){
+
+        n=m1.n;
+        m=m2.m;
+        std::vector<std::thread> threads(thread_num);
+
+        int** temp = new int*[m1.n];
+        for(int i = 0; i<m2.m;i++){
+            temp[i]=new int[m2.m]{0};
+        }
+
+        matriz=temp;
+
+        int pos = 0;
+
+        for(auto& h:threads){
+            h=std::thread(&matriz_thread::multiplicar,this,std::ref(m1),std::ref(m2),pos);
+            pos++;
+        }
+
+        for(auto& i: threads){
+            i.join();
+        }
+
+    };
 
 };
 
-void multiplicar(matriz_thread& m1, matriz_thread& m2, matriz_thread& respuesta, int thread_num, int max_threads){
-
-    for (int i = thread_num*m1.n/max_threads; i < (thread_num+1)*m1.n/max_threads; i++) {
-        for (int j = 0; j < m2.m; j++) {
-            for (int k = 0; k < m2.n; k++) {
-                respuesta.matriz[i][j] += (m1.matriz[i][k] * m2.matriz[k][j]);
-            }
-        }
-    }
-};
 
 
 #endif //UNIDAD_6_PROGRAMACION_CONCURRENTE_ALEJANDROGH97_MATRIZ_THREAD_H
