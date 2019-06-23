@@ -39,13 +39,13 @@ public:
         }
     }
 
-    void llenarMatriz(int _n, int _m){
+    void llenarMatriz_por_coordenada(int _n, int _m){
         if(_n<n && _n >= 0 && _m<m && _m >= 0) {
             std::cin >> matriz[_n][_m];
         }
     }
 
-    void llenarMatriz(int num){
+    void llenarMatriz_un_digito(int num){
         for(int row = 0;row<n;row++){
             for(int column = 0;column<m;column++){
                 matriz[row][column]=num;
@@ -81,7 +81,7 @@ public:
         else{
             std::cout<<"Matrices invalidas\n";
             auto respuesta = new matriz_reg(1, 1);
-            respuesta->llenarMatriz(0);
+            respuesta->llenarMatriz_un_digito(0);
             return respuesta;
         }
     }

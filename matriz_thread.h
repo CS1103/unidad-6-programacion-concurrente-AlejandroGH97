@@ -14,20 +14,18 @@
 #include <mutex>
 
 
-static const int thread_num = 4;
-
-
 class matriz_thread {
     std::mutex mtx;
     int n;//filas
     int m;//columnas
+    int thread_num;
 
 public:
     int** matriz;
 
     matriz_thread()=default;
 
-    matriz_thread(int n, int m):n{n},m{m}{
+    matriz_thread(int n, int m, int thread_num):n{n},m{m},thread_num{thread_num}{
         matriz = new int*[n];
         for(int row = 0;row<n;row++){
             matriz[row]=new int[m];
@@ -75,9 +73,7 @@ public:
         for (int i = thread*m1.n/thread_num; i < (thread+1)*m1.n/thread_num; i++) {
             for (int j = 0; j < m2.m; j++) {
                 for (int k = 0; k < m2.n; k++){
-                    mtx.lock();
                     matriz[i][j] += (m1.matriz[i][k] * m2.matriz[k][j]);
-                    mtx.unlock();
                 }
             }
         }
@@ -85,32 +81,37 @@ public:
     }
 
 
-    void multiplicar_thread(matriz_thread& m1, matriz_thread& m2){
+    void multiplicar_thread(matriz_thread& m1, matriz_thread& m2) {
 
-        n=m1.n;
-        m=m2.m;
-        std::vector<std::thread> threads(thread_num);
+        if (m1.m == m2.n) {
+//        n=m1.n;
+//        m=m2.m;
+//
+//        int** temp = new int*[m1.n];
+//        for(int i = 0; i<n;i++){
+//            temp[i]=new int[m2.m]{0};
+//        }
+//
+//        matriz=temp;
 
-        int** temp = new int*[m1.n];
-        for(int i = 0; i<n;i++){
-            temp[i]=new int[m2.m]{0};
+            std::vector<std::thread> threads(thread_num);
+
+            int pos = 0;
+
+            for (auto &h:threads) {
+                h = std::thread(&matriz_thread::multiplicar, this, std::ref(m1), std::ref(m2), pos);
+                pos++;
+            }
+
+            for (auto &i: threads) {
+                i.join();
+            }
+
+        }else{
+            std::cout<<"Matrices invalidas.";
         }
 
-        matriz=temp;
-
-        int pos = 0;
-
-        for(auto& h:threads){
-            h=std::thread(&matriz_thread::multiplicar,this,std::ref(m1),std::ref(m2),pos);
-            pos++;
-        }
-
-        for(auto& i: threads){
-            i.join();
-        }
-
-    };
-
+    }
 };
 
 
