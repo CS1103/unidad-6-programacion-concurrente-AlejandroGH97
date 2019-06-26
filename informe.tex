@@ -34,7 +34,7 @@ Se crean dos clases $matriz\_reg$ y $matriz\_thread$ ambas con variables $n$ y $
 de filas y columnas de su matriz, respectivamente. Ambas tambien cuentan con metodos para llenar su matriz de diferentes 
 maneras. En el constructor de ambas se genera la matriz con los tama;os indicados en los parametros y se guarda en su variable 
 matriz, un arreglo de tipo $int**$. Para la simplificacion del programa, se uso dos matrices del mismo tama;o (2000 x 2000) 
-y el programa se ejecuto en un procesador Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz con 8 threads. Para el benchmark se so la funcion
+y el programa se ejecuto en un procesador Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz con 4 threads y la capacidad de hyperthreading. Para el benchmark se so la funcion
 $clock()$ que mide el tiempo total del CPU. Este metodo para medir el tiempo considera el tiempo que tomo con todos los threads y devuelve 
 el tiempo en la unidad $clock\_t$ por lo que dividimos nuestro resultado de $inicio$ - $fin$ por la cantidad de clocks por segundo almacenado 
 en la variable $CLOCKS\_PER\_SEC$ multiplicado por la cantidad de threads que usamos (si la cantidad de threads usados es mayor a 8, se utiliza 
@@ -43,7 +43,7 @@ programa con un solo thread.
 
 \section{Resultados}
 Al correr el programa el tiempo de ejecución empezó alto y fue bajando hasta llegar
-a los 8 threads e incrementó nuevamente al agregar más llegando a un valor que parace ser asintotico.
+a los 8 threads e incrementó nuevamente al agregar más llegando a un valor que parace ser asintótico.
 \\
 
 \begin{tikzpicture}
@@ -79,5 +79,10 @@ threads que se debe crear en un programa sea igual a la cantidad de threads del 
 threads de los que tiene el procesador van a haber threads esperando a que se libere otro thread del procesador. Si se crea
 la cantidad de threads que tiene el procesador, se esta repartiendo las instrucciones del programa entre todos los threads
 por lo que al terminar la ejecución de estos threads se termina la ejecución del programa ya que no había threads esperando
-para ejecutarse.
+para ejecutarse. Este hallazgo concuerda con papers scientificos tal como \href{https://ieeexplore.ieee.org/document/7384327}{$Thread Count Prediction Model: Dynamically Adjusting Threads for Heterogeneous Many-Core Systems$} donde 
+se muestra a traves de la ley de Amdahl que la cantidad optima de threads para un proceso es la cantidad de threads que puede correr 
+el procesador de tu máquina simultaneamente. Crear mas threads que esto genera una clase de "bottleneck" por lo que un thread estaria 
+en espera hasta que un thread del procesador se libere.
+
+
 \end{document}
